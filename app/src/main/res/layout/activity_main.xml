@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F2F2F2">
+
+    <!-- Natija oynasi -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="#FFFFFF"
+        android:text="0"
+        android:textSize="32sp"
+        android:gravity="end|center_vertical"
+        android:padding="16dp"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Calculator tugmalari -->
+    <GridLayout
+        android:id="@+id/gridButtons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:rowCount="5"
+        android:columnCount="4"
+        app:layout_constraintTop_toBottomOf="@id/tvResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Birinchi qator -->
+        <Button android:text="7" android:id="@+id/btn7" style="@style/CalcButton"/>
+        <Button android:text="8" android:id="@+id/btn8" style="@style/CalcButton"/>
+        <Button android:text="9" android:id="@+id/btn9" style="@style/CalcButton"/>
+        <Button android:text="/" android:id="@+id/btnDiv" style="@style/CalcButtonOperator"/>
+
+        <!-- Ikkinchi qator -->
+        <Button android:text="4" android:id="@+id/btn4" style="@style/CalcButton"/>
+        <Button android:text="5" android:id="@+id/btn5" style="@style/CalcButton"/>
+        <Button android:text="6" android:id="@+id/btn6" style="@style/CalcButton"/>
+        <Button android:text="*" android:id="@+id/btnMul" style="@style/CalcButtonOperator"/>
+
+        <!-- Uchinchi qator -->
+        <Button android:text="1" android:id="@+id/btn1" style="@style/CalcButton"/>
+        <Button android:text="2" android:id="@+id/btn2" style="@style/CalcButton"/>
+        <Button android:text="3" android:id="@+id/btn3" style="@style/CalcButton"/>
+        <Button android:text="-" android:id="@+id/btnMinus" style="@style/CalcButtonOperator"/>
+
+        <!-- To‘rtinchi qator -->
+        <Button android:text="0" android:id="@+id/btn0" style="@style/CalcButton" />
+        <Button android:text="." android:id="@+id/btnDot" style="@style/CalcButton"/>
+        <Button android:text="=" android:id="@+id/btnEqual" style="@style/CalcButtonOperator"/>
+        <Button android:text="+" android:id="@+id/btnPlus" style="@style/CalcButtonOperator"/>
+
+        <!-- Beshinchi qator (Clear) -->
+        <Button android:text="C" android:id="@+id/btnClear" style="@style/CalcButtonClear"
+            android:layout_columnSpan="4"/>
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
